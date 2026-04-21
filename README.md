@@ -1,71 +1,93 @@
-# Getting Started with Create React App
+# SAGE Shell
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Suggestive Auto-command Generative Environment Shell**
 
-## Available Scripts
+SAGE Shell is a modern Linux shell built in C, designed to make command-line interaction more intuitive, efficient, and informative. It enhances the traditional terminal experience with intelligent suggestions, autocomplete, and execution insights while retaining full control and performance.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+SAGE Shell was developed as a final year project with the goal of improving usability in command-line environments. It combines low-level system programming with user-focused features to create a more accessible and guided shell experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Command Execution and Pipelining
 
-### `npm run build`
+* Executes Linux commands using `fork()` and `execvp()`
+* Supports command chaining using pipes (`|`)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Input and Output Redirection
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Handles input and output redirection using `<` and `>` operators
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Command Logging and History
 
-### `npm run eject`
+* Maintains a log of executed commands
+* Allows replaying previous command sequences
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Smart Autocomplete and Suggestions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Provides command and path suggestions
+* Detects and corrects common typing errors
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Resource-Aware Execution
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Displays CPU usage, memory usage, and execution time
 
-## Learn More
+### Safety and Error Handling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Warns users before executing potentially risky commands
+* Provides helpful feedback for failed commands
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the repository and build the project:
 
-### Analyzing the Bundle Size
+```bash
+git clone https://github.com/your-username/sage-shell.git
+cd sage-shell
+gcc sage.c -o sage
+./sage
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* `sage.c` – Core implementation of the shell
+* Additional modules – Handle parsing, execution, logging, and suggestions
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Developers
 
-### Deployment
+* Ishan Khan — Project Lead
+* Humza Anwar Khan — System Design
+* Khateeb Aamir Usmani — Core Developer
+* Muhammad Ali — Testing and Optimization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Motivation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# sage-shell
+Traditional shells are powerful but often unintuitive for new users. SAGE Shell aims to bridge that gap by introducing guidance, suggestions, and feedback while maintaining the flexibility of a standard Linux shell.
+
+---
+
+## Future Improvements
+
+* Enhanced autocomplete with context awareness
+* Plugin support for extensibility
+* Improved UI/UX for terminal interaction
+* Cross-platform compatibility
+
+---
+
+## License
+
+This project is developed for academic and educational purposes.
