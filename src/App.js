@@ -221,7 +221,7 @@ export default function App() {
             Installation
           </h2>
 
-          <div className="bg-black/70 backdrop-blur border border-white/10 rounded-xl p-6 text-left font-mono text-green-400 space-y-6">
+          <div className="bg-black/70 backdrop-blur border border-white/10 rounded-xl p-6 text-left font-mono text-green-400 space-y-6 break-words overflow-hidden">
             <div>
               <p className="text-gray-500 text-xs mb-2"># Clone repo</p>
               <p>git clone https://github.com/ishankhan28/sageshell</p>
