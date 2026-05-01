@@ -264,7 +264,7 @@ export default function App() {
               {
                 name: "Humza Anwar Khan",
                 role: "System Developer",
-                img: `${process.env.PUBLIC_URL}/humza.jpg`,
+                img: `${process.env.PUBLIC_URL}/humza.jpeg`,
               },
               {
                 name: "Khateeb Aamir Usmani",
