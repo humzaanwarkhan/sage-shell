@@ -234,12 +234,12 @@ export default function App() {
 
             <div className="border-t border-white/10 pt-4">
               <p className="text-gray-500 text-xs mb-2"># Compile</p>
-              <p>gcc sage.c -o sage</p>
+              <p>gcc sageshell.c -o sageshell</p>
             </div>
 
             <div className="border-t border-white/10 pt-4">
               <p className="text-gray-500 text-xs mb-2"># Run</p>
-              <p>./sage</p>
+              <p>./sageshell</p>
             </div>
           </div>
         </section>
@@ -256,33 +256,37 @@ export default function App() {
 
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
             {[
-              { name: "Ishan Khan", role: "Project Lead", img: "/ishan.jpeg" },
+              {
+                name: "Ishan Khan",
+                role: "Project Lead",
+                img: `${process.env.PUBLIC_URL}/ishan.jpeg`,
+              },
               {
                 name: "Humza Anwar Khan",
                 role: "System Developer",
-                img: "/humza.jpg",
+                img: `${process.env.PUBLIC_URL}/humza.jpg`,
               },
               {
                 name: "Khateeb Aamir Usmani",
                 role: "AI and Intelligence Developer",
-                img: "/khateeb.jpeg",
+                img: `${process.env.PUBLIC_URL}/khateeb.jpeg`,
               },
               {
                 name: "Muhammad Ali",
                 role: "Testing & Optimization",
-                img: "/ali.jpeg",
+                img: `${process.env.PUBLIC_URL}/ali.jpeg`,
               },
             ].map((dev, i) => (
               <div
                 key={i}
                 className="group p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-green-400 transition backdrop-blur text-center hover:-translate-y-1"
               >
-                {/* IMAGE (MORE PROMINENT) */}
-                <div className="w-28 h-28 mx-auto mb-6">
+                {/* IMAGE */}
+                <div className="w-28 h-28 mx-auto mb-6 overflow-hidden rounded-full border border-white/10">
                   <img
                     src={dev.img}
                     alt={dev.name}
-                    className="w-full h-full object-cover rounded-full border border-white/10 group-hover:scale-105 transition duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
                   />
                 </div>
 
@@ -295,6 +299,56 @@ export default function App() {
             ))}
           </div>
         </section>
+
+        {/* SUPERVISOR */}
+<section className="py-28 px-6 max-w-6xl mx-auto text-center">
+  <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+    Under the Supervision Of
+  </h2>
+
+  <p className="text-gray-400 mb-16 max-w-2xl mx-auto">
+    This project was developed under the valuable guidance and mentorship
+    of our respected supervisor.
+  </p>
+
+  <div className="max-w-4xl mx-auto">
+    <div className="group p-14 rounded-3xl bg-white/5 border border-white/10 hover:border-green-400 transition-all duration-300 backdrop-blur hover:-translate-y-1 hover:shadow-[0_10px_40px_#22c55e20]">
+
+      {/* IMAGE */}
+      <div className="w-40 h-40 mx-auto mb-8 overflow-hidden rounded-full border border-white/10">
+        <img
+          src={`${process.env.PUBLIC_URL}/supervisor.jpeg`}
+          alt="Dr. Roshan Jahan"
+          className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+        />
+      </div>
+
+      {/* NAME */}
+      <h3 className="text-3xl md:text-4xl font-semibold mb-3 text-white">
+        Dr. Roshan Jahan
+      </h3>
+
+      {/* DESIGNATION */}
+      <p className="text-green-400 text-base mb-5">
+        Assistant Professor
+      </p>
+
+      {/* DEPARTMENT */}
+      <p className="text-gray-400 text-base leading-relaxed max-w-2xl mx-auto">
+        Department of Computer Science and Engineering
+        <br />
+        Integral University, Lucknow
+      </p>
+
+      {/* DESCRIPTION */}
+      <p className="text-gray-500 text-base leading-relaxed mt-8 max-w-2xl mx-auto">
+        Her continuous support, technical guidance, and mentorship played
+        a significant role in shaping the development and successful
+        execution of the SAGE Shell project.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* CTA */}
         <section className="py-20 text-center">
@@ -332,7 +386,7 @@ export default function App() {
                 Features
               </button>
               <a
-                href="/sage-shell.zip"
+                href="/sageshell-main(1).zip"
                 download
                 className="hover:text-white transition"
               >
