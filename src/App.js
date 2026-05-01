@@ -76,7 +76,8 @@ export default function App() {
             </a>
 
             <a
-              href="/sageshell-main.zip"
+              href={`${process.env.PUBLIC_URL}/sageshell-main.zip`}
+              download
               className="px-6 py-3 border border-white/20 rounded-md hover:bg-white/10 transition"
             >
               Download
