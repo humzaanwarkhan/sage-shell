@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sage-shell/static/css/main.936d2452.css",
-    "main.js": "/sage-shell/static/js/main.64605747.js",
+    "main.css": "/sage-shell/static/css/main.dbcb58b0.css",
+    "main.js": "/sage-shell/static/js/main.37ce5c88.js",
     "static/js/453.6b2709b9.chunk.js": "/sage-shell/static/js/453.6b2709b9.chunk.js",
     "index.html": "/sage-shell/index.html",
-    "main.936d2452.css.map": "/sage-shell/static/css/main.936d2452.css.map",
-    "main.64605747.js.map": "/sage-shell/static/js/main.64605747.js.map",
+    "main.dbcb58b0.css.map": "/sage-shell/static/css/main.dbcb58b0.css.map",
+    "main.37ce5c88.js.map": "/sage-shell/static/js/main.37ce5c88.js.map",
     "453.6b2709b9.chunk.js.map": "/sage-shell/static/js/453.6b2709b9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.936d2452.css",
-    "static/js/main.64605747.js"
+    "static/css/main.dbcb58b0.css",
+    "static/js/main.37ce5c88.js"
   ]
 }
